@@ -68,19 +68,29 @@ void precalc()
  
 void resolve()
 {
-	int n;
-  cin>>n;
-  if(n==2||n==3){
-    cout<<"NO SOLUTION"<<endl;
-    return;
+	int x,y;
+  cin>>x>>y;
+  int sec=max(x,y);
+  if(sec==x){
+    if(x%2==0){
+      cout<<((sec*sec)-(y)+1)<<endl;
+      return;
+    }
+    else{
+      cout<<((sec*sec)-(x)-(x-y)+1)<<endl;
+      return;
+    }
   }
-  for(int i=2;i<=n;i+=2){
-    cout<<i<<" ";
+  else{
+    if(y%2==0){
+      cout<<((sec*sec)-(y)-(y-x)+1)<<endl;
+      return;
+    }
+    else{
+      cout<<((sec*sec)-(x)+1)<<endl;
+      return;
+    }
   }
-  for(int i=1;i<=n;i+=2){
-    cout<<i<<" ";
-  }
-  cout<<endl;
 }
 int32_t main()
 {
