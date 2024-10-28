@@ -18,8 +18,8 @@ using namespace std;
  
 #define int long long int
 #define double long double
-#define INT_MAX LLONG_MAX
-#define INT_MIN LLONG_MIN
+// #define INT_MAX LLONG_MAX
+// #define INT_MIN LLONG_MIN
 #define endl '\n'
 #define vin(a)                         \
 	for (int i = 0; i < (a).size(); i++) \
