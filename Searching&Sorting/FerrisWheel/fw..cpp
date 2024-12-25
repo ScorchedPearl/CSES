@@ -114,29 +114,26 @@ void precalc()
 {
 }
 void resolve(ll tc){
-    int n,m,k;
-    cin>>n>>m>>k;
-    vi a(n),b(m);
-    vin(a);
-    vin(b);
-    sort(all(b));
-    sort(all(a));
+    int n,w;
+    cin>>n>>w;
+    vi v(n);
+    vin(v);
+    sort(all(v));
+    int l=0;
+    int r=n-1;
     int ans=0;
-    int i,j=0;
-    while(i<n&&j<m){
-     if(a[i]-k>b[j]){
-      j++;
-     }
-     else if(a[i]+k<b[j]){
-      i++;
+    while(l<=r){
+     if(v[l]+v[r]>w){
+      ans+=1;
+      r--;
      }
      else{
-      ans++;
-      i++;
-      j++;
+      ans+=1;
+      l++;
+      r--;
      }
     }
-    cout<<ans<<endl;
+    cout<<ans;
 } 
 int32_t main()
  {

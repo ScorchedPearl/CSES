@@ -14,6 +14,7 @@
 #include <limits.h>
 #include <iomanip>
 #include <initializer_list>
+#include <utility>
 using namespace std;
  
 
@@ -114,29 +115,26 @@ void precalc()
 {
 }
 void resolve(ll tc){
-    int n,m,k;
-    cin>>n>>m>>k;
-    vi a(n),b(m);
+    int n,m;
+    cin >> n >> m;
+    vi a(n);
     vin(a);
-    vin(b);
-    sort(all(b));
-    sort(all(a));
-    int ans=0;
-    int i,j=0;
-    while(i<n&&j<m){
-     if(a[i]-k>b[j]){
-      j++;
-     }
-     else if(a[i]+k<b[j]){
-      i++;
-     }
-     else{
-      ans++;
-      i++;
-      j++;
-     }
+    set<pair<int,int> >st;
+    loop(0,n,i){
+        st.insert(mp(a[i],i));
     }
-    cout<<ans<<endl;
+    loop(0,m,i){
+        int x;
+        cin >> x;
+        auto it = st.lower_bound(mp(x+1,0));
+        if(it == st.begin()){
+            cout << -1 << endl;
+        }else{
+            it--;
+            cout << (*it).first << endl;
+            st.erase(it);
+        }
+    }
 } 
 int32_t main()
  {

@@ -1,0 +1,1 @@
+{"name":"Local: ct","url":"/Users/kaizopearl/CSIS/Searching&Sorting/ Concert Tickets/ct.cpp","tests":[{"id":1735125573425,"input":"5 3\n5 3 7 8 5\n4 8 3","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/kaizopearl/CSIS/Searching&Sorting/ Concert Tickets/ct.cpp","group":"local","local":true}
