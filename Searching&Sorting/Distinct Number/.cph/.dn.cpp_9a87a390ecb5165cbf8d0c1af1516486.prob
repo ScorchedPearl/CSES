@@ -1,0 +1,1 @@
+{"name":"Local: dn","url":"/Users/kaizopearl/CSIS/Searching&Sorting/Distinct Number/dn.cpp","tests":[{"id":1735121205649,"input":"5\n2 3 2 2 3","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/kaizopearl/CSIS/Searching&Sorting/Distinct Number/dn.cpp","group":"local","local":true}
